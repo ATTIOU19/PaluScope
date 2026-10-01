@@ -1,12 +1,2 @@
 # Journal des décisions
-
-| Date | Décision / sujet | Décision retenue et justification |
-|---|---|---|
-| | Dataset de départ | |
-| | Méthode de mesure du flou | |
-| | Indicateurs de contraste | |
-| | Méthode de détection de surexposition | |
-| | Stratégie de candidats | |
-| | Convention des sorties des modules | |
-| | Choix validé avec le mentor | |
-| | Autre | |
+| 2026-10-01 | Dataset de départ | plasmodium-phonecamera (Makerere AI Lab) : images smartphone de frottis épais, annotations par boîtes, licence CC0. Adapté à l'étude de la qualité d'image et à l'extraction de candidats sans ML. |
