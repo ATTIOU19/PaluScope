@@ -10,6 +10,27 @@ Projet fil rouge — AMA, PIIA Cohorte 2, Groupe 5, Spécial Machine Learning.
 - Livrable : **V0 : Blood Smear Quality Analyzer**
 - Hors périmètre : CNN, Transfer Learning, ML supervisé, application finale
 
+# Données
+
+## Dataset de départ : Microscopy Malaria Dataset — split `plasmodium-phonecamera`
+- Auteurs : J. Quinn, R. Nakasi, P. K. B. Mugagga, P. Byanyima, W. Lubega, A. Andama
+  (Makerere University AI Lab, Ouganda), 2016
+- Page officielle : https://air.ug/microscopy_dataset/
+- Téléchargement : https://air.ug/static/images/downloads/plasmodium-phonecamera.zip
+- Licence : CC0 1.0
+- Contenu : frottis sanguins épais (Field stain), ×1000, photographiés au smartphone
+  via un adaptateur de microscope ; 1182 images, 7245 plasmodiums annotés
+  (boîtes englobantes)
+- Citation : Quinn et al., Microscopy Malaria Dataset, 2016, https://air.ug/microscopy_dataset/
+
+## Organisation
+- `raw/` : dataset brut, NON versionné. Dézipper ici le fichier téléchargé.
+- `processed/` : données transformées, NON versionnées.
+- `samples/` : petit jeu d'images d'exemple pour les tests locaux (versionné).
+
+## À compléter après exploration
+Format des annotations, dimensions des images, anomalies observées.
+
 ## Équipe
 | Membre | Responsabilité principale |
 |---|---|
