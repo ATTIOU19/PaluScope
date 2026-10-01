@@ -1,4 +1,4 @@
-# PaluScope — Phase 0 — Note de synthèse sur les données
+# PaluScope - Phase 0 - Note de synthèse sur les données
 
 **Bloc A · Responsable : Membre 1 · Notebook associé : `notebooks/phase_0/01_data_exploration.ipynb`**
 
