@@ -67,9 +67,9 @@ La correspondance entre images et annotations est complète (même nom de fichie
 ## 6. Anomalies et limites
 
 1. Écart entre le nombre de parasites annoncé (7245) et celui compté (7628)
-2. Boîtes qui dépassent les bornes de l'image
+2. Boîtes qui dépassent les bornes de l'image (408 boîtes hors image)
 3. Boîtes de taille fixe : pas de taille réelle de parasite
-4. Un fichier sans extension à identifier
+4. Un fichier sans extension à identifier (fichier .gitkeep)
 5. Aucune étiquette de qualité (flou, exposition) : la validation des mesures se fera par comparaison visuelle
 6. Frottis épais uniquement, un seul type de coloration et de dispositif : la généralisation à d'autres domaines n'est pas démontrée
 
