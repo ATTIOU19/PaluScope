@@ -1,2 +1,6 @@
 # Journal des décisions
 | 2026-10-01 | Dataset de départ | plasmodium-phonecamera (Makerere AI Lab) : images smartphone de frottis épais, annotations par boîtes, licence CC0. Adapté à l'étude de la qualité d'image et à l'extraction de candidats sans ML. |
+| 2026-10-08 | Stratégie de candidats | Image grise lissée, puis black-hat (noyau elliptique de 15 px), seuil d'Otsu avec plancher à 20, ouverture et fermeture (3 px), composantes connexes (connectivité 8), puis filtres d'aire (10 à 150 px²) et de circularité (≥ 0,3). Le black-hat isole les petites taches sombres quelle que soit la teinte du frottis. |
+| 2026-10-08 | Choix des paramètres | Configuration par défaut retenue : rappel 0,99, environ 17,9 candidats par image, environ 6,4 sur les images sans parasite. Comparée au canal vert (0,97), au contraste min 12 (1,00 mais 38,5 candidats par image), au contraste min 30 (0,93) et au black-hat 9 ou 21 (0,85). Priorité au rappel, puis au nombre de candidats. |
+| 2026-10-08 | Bornes d'aire | Aire de 10 à 150 px², fixée d'après les aires des candidats tombant dans des boîtes annotées (section 7 du notebook). Les boîtes de 40×40 px ne servent pas à régler la taille. |
+| 2026-10-08 | Convention des sorties | Liste de dictionnaires {id, bbox (x, y, w, h), area, perimeter, circularity}, conforme à docs/conventions.md. |
