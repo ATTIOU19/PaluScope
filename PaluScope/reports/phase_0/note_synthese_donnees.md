@@ -6,7 +6,7 @@
 
 - **Nom :** Microscopy Malaria Dataset, split `plasmodium-phonecamera`
 - **Auteurs :** J. Quinn, R. Nakasi, P. K. B. Mugagga, P. Byanyima, W. Lubega, A. Andama (Makerere University AI Lab, Ouganda), 2016
-- **Source :** https://air.ug/microscopy_dataset/
+- **Source :** https://air.ug/microscopy/
 - **Licence :** CC0 1.0
 - **Nature des images :** frottis sanguins épais (Field stain), grossissement ×1000, photographiés avec un smartphone monté sur un microscope
 - **Provenance indiquée dans les annotations :** Makerere Automated Lab Diagnostics Database, Mulago National Referral Hospital
@@ -19,7 +19,6 @@
 | Annotations (`.xml`) | 1182 |
 | Images sans annotation | 0 |
 | Annotations sans image | 0 |
-| Fichier sans extension | 1 (à identifier) |
 
 La correspondance entre images et annotations est complète (même nom de fichier, ex. `plasmodium-phone-0001`).
 
@@ -42,7 +41,7 @@ La correspondance entre images et annotations est complète (même nom de fichie
 ### Particularités des boîtes
 - **Taille quasi constante :** médiane et quartiles à 40 × 40 px (écart-type d'environ 2,5 px). Ces boîtes semblent être de taille fixe centrées sur chaque parasite (hypothèse). **Elles ne donnent donc pas la taille réelle des parasites** et ne doivent pas servir à calibrer les filtres de taille.
 - **Boîtes qui sortent de l'image :** `xmin` descend jusqu'à −19,3, `ymin` jusqu'à −20, `xmax` et `ymax` montent jusqu'à 770, alors que l'image fait 750 px. Certaines boîtes sont tronquées (largeur minimale 1,27 px). Elles devront être **clippées** aux bornes de l'image avant toute comparaison avec des candidats.
-  - Nombre de boîtes hors image : *[à compléter après exécution de la cellule de clipping]*
+  - Nombre de boîtes hors image : *[]*
 
 ## 5. Variabilité visuelle
 
@@ -61,7 +60,7 @@ La correspondance entre images et annotations est complète (même nom de fichie
 
 - La luminosité varie peu : pas d'image franchement sombre ou surexposée dans l'échantillon.
 - Le contraste varie davantage.
-- La variance du Laplacien est faible et resserrée : elle sépare mal les images nettes des floues. D'autres mesures de netteté seront à tester (Membre 2).
+- La variance du Laplacien est faible et resserrée : elle sépare mal les images nettes des floues. D'autres mesures de netteté seront à tester (Juste AGBO).
 - Ces chiffres sont **indicatifs** : l'échantillon est aléatoire et le choix des mesures finales relève du Quality Analyzer.
 
 ## 6. Anomalies et limites
