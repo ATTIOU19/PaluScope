@@ -82,5 +82,4 @@ La correspondance entre images et annotations est complète (même nom de fichie
 ## 8. À étudier plus tard
 
 - Origine exacte de l'écart 7245 / 7628
-- Contenu du fichier sans extension
 - Normalisation de la couleur entre images (Phase 1)
