@@ -75,10 +75,10 @@ La correspondance entre images et annotations est complète (même nom de fichie
 
 ## 7. Conséquences pour la suite
 
-- **Quality Analyzer (Membre 2) :** prévoir des mesures de netteté plus discriminantes que le Laplacien seul, et tenir compte de la forte variabilité de couleur.
-- **Candidats (Membre 3) :** calibrer la taille des régions à partir des parasites réels sur l'image, pas à partir des boîtes de 40 px. Les 234 images sans parasite serviront à estimer les faux positifs.
+- **Quality Analyzer (Juste AGBO) :** prévoir des mesures de netteté plus discriminantes que le Laplacien seul, et tenir compte de la forte variabilité de couleur.
+- **Candidats (Aichatou TRAORE) :** calibrer la taille des régions à partir des parasites réels sur l'image, pas à partir des boîtes de 40 px. Les 234 images sans parasite serviront à estimer les faux positifs.
 - **Évaluation (phases ultérieures) :** clipper les boîtes avant comparaison.
-- **Intégration (Membre 1) :** conserver `data/samples/` avec des images variées (pâles, très colorées, sans parasite, très chargées).
+- **Intégration (Narcisse ATTIOU) :** conserver `data/samples/` avec des images variées (pâles, très colorées, sans parasite, très chargées).
 
 ## 8. À étudier plus tard
 
