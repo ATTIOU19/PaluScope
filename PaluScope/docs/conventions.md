@@ -1,7 +1,7 @@
-# Conventions des modules (proposition — à valider en équipe)
+# Conventions des modules
 
 ## Entrée
-Image chargée en tableau NumPy (RGB, uint8), ou chemin vers le fichier (à trancher).
+Image chargée en tableau NumPy (RGB, uint8), ou chemin vers le fichier.
 
 ## Sortie du Quality Analyzer : `analyze_image(image) -> dict`
 ```python

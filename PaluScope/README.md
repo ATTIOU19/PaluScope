@@ -1,27 +1,27 @@
 # PaluScope
 
 Microscopie intelligente du paludisme : détection, localisation et quantification assistées.
-Projet fil rouge — AMA, PIIA Cohorte 2, Groupe 5, Spécial Machine Learning.
+Projet fil rouge : AMA, PIIA Cohorte 2, Groupe 5, Spécial Machine Learning.
 
 **Chaîne cible :** Image → Contrôle qualité → Candidats → Classification / localisation → Comptage → Revue humaine
 
-## Phase actuelle : Phase 0 — Vision classique et mathématiques
-- Période : 26 septembre 2026 – début octobre 2026
+## Phase actuelle : Phase 0 : Vision classique et mathématiques
+- Période : 26 septembre 2026 - début octobre 2026
 - Livrable : **V0 : Blood Smear Quality Analyzer**
 - Hors périmètre : CNN, Transfer Learning, ML supervisé, application finale
 
 # Données
 
-## Dataset de départ : Microscopy Malaria Dataset — split `plasmodium-phonecamera`
+## Dataset de départ : Microscopy Malaria Dataset - split `plasmodium-phonecamera`
 - Auteurs : J. Quinn, R. Nakasi, P. K. B. Mugagga, P. Byanyima, W. Lubega, A. Andama
   (Makerere University AI Lab, Ouganda), 2016
-- Page officielle : https://air.ug/microscopy_dataset/
-- Téléchargement : https://air.ug/static/images/downloads/plasmodium-phonecamera.zip
+- Page officielle : https://air.ug/microscopy/
+- Téléchargement : http://air.ug/downloads/plasmodium-phonecamera.zip
 - Licence : CC0 1.0
 - Contenu : frottis sanguins épais (Field stain), ×1000, photographiés au smartphone
   via un adaptateur de microscope ; 1182 images, 7245 plasmodiums annotés
   (boîtes englobantes)
-- Citation : Quinn et al., Microscopy Malaria Dataset, 2016, https://air.ug/microscopy_dataset/
+- Citation : Quinn et al., Microscopy Malaria Dataset, 2016, https://air.ug/microscopy/
 
 ## Organisation
 - `raw/` : dataset brut, NON versionné. Dézipper ici le fichier téléchargé.
@@ -34,9 +34,9 @@ Format des annotations, dimensions des images, anomalies observées.
 ## Équipe
 | Membre | Responsabilité principale |
 |---|---|
-| Membre 1 | Coordination, exploration des données, intégration V0 |
-| Membre 2 | Quality Analyzer (`src/quality/`) |
-| Membre 3 | Candidate Detection (`src/preprocessing/`, `src/candidates/`) |
+| Narcisse ATTIOU | Coordination, exploration des données, intégration V0 |
+| Juste AGBO | Quality Analyzer (`src/quality/`) |
+| Aichatou TRAORE| Candidate Detection (`src/preprocessing/`, `src/candidates/`) |
 
 ## Installation
 ```bash
