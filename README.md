@@ -1,10 +1,18 @@
-# PaluScope
+<p align="center">
+  <img src="docs/assets/banner.svg" alt="PaluScope : microscopie intelligente du paludisme" width="100%">
+</p>
 
-Microscopie intelligente du paludisme : détection, localisation et quantification assistées.
-Projet fil rouge : AMA, PIIA Cohorte 2, Groupe 5, Spécial Machine Learning.
+<p align="center">
+  <img alt="Phase" src="https://img.shields.io/badge/phase-0%20%C2%B7%20V0-6f42c1">
+  <img alt="Statut" src="https://img.shields.io/badge/statut-en%20d%C3%A9veloppement-orange">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white">
+  <img alt="OpenCV" src="https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white">
+</p>
 
-**Chaîne cible :** Image → Contrôle qualité → Candidats → Classification / localisation → Comptage → Revue humaine
+> **Prototype de recherche et de formation.** PaluScope n'est pas un dispositif médical : il ne pose aucun
+> diagnostic clinique et ne prescrit aucun traitement. Il assiste la lecture de frottis sanguins par un humain.
 
+**Chaîne de traitement :** Image → Contrôle qualité → Candidats → Classification / localisation → Comptage → Revue humaine
 ## Phase actuelle : Phase 0 : Vision classique et mathématiques
 - Période : 26 septembre 2026 - début octobre 2026
 - Livrable : **V0 : Blood Smear Quality Analyzer**
