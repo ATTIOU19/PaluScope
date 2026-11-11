@@ -1,0 +1,36 @@
+{
+  "config": "configs/candidates_v1.json",
+  "params": {
+    "channel": "gray",
+    "smooth_ksize": 3,
+    "blackhat_ksize": 15,
+    "min_contrast": 20.0,
+    "open_ksize": 3,
+    "close_ksize": 3,
+    "min_area": 6.0,
+    "max_area": 250.0,
+    "min_circularity": 0.3
+  },
+  "splits": {
+    "train": {
+      "n_images": 827,
+      "n_gt": 5354,
+      "n_found": 5308,
+      "recall": 0.9914082928651475,
+      "n_candidates": 15180,
+      "cand_per_image": 18.355501813784763,
+      "candidate_precision": 0.3922266139657444,
+      "images_without_candidate": 26
+    },
+    "val": {
+      "n_images": 179,
+      "n_gt": 1162,
+      "n_found": 1155,
+      "recall": 0.9939759036144579,
+      "n_candidates": 3181,
+      "cand_per_image": 17.77094972067039,
+      "candidate_precision": 0.4177931468091795,
+      "images_without_candidate": 7
+    }
+  }
+}
