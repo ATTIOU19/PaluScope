@@ -30,7 +30,7 @@ Conventions générales (inchangées) : image = tableau NumPy RGB, uint8, (H, W,
 `cv2.imread` donne du BGR, il faut convertir à l'entrée. Boîtes d'un candidat : `(x, y, w, h)`.
 Boîtes annotées : dictionnaires `xmin, ymin, xmax, ymax` (format de `clip_boxes`).
 
-## Registre (P1-A) : `src/data/registry.py`
+## Registre (P1-A) : `src/data/register.py`
 
 ```python
 load_registry(path=None) -> pd.DataFrame
