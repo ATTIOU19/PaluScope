@@ -45,15 +45,15 @@ def _shape_features(cand: dict, sub: np.ndarray) -> dict:
     }
 
 
-def geometry_features(candidates: list[dict], clean_mask: np.ndarray) -> list[dict]:
-    """Une ligne de features `geo_*` par candidat, dans le même ordre que `candidates`."""
+def candidate_masks(candidates: list[dict], clean_mask: np.ndarray) -> list[np.ndarray]:
+    """Masque binaire uint8 (recadré sur la bbox) de chaque candidat, dans le même ordre."""
     n, labels, stats, _ = cv2.connectedComponentsWithStats(clean_mask, connectivity=8)
     index: dict[tuple, list[int]] = {}
     for lab in range(1, n):
         x, y, w, h, a = (int(v) for v in stats[lab])
         index.setdefault((x, y, w, h, a), []).append(lab)
 
-    rows = []
+    masks = []
     for c in candidates:
         x, y, w, h = (int(v) for v in c["bbox"])
         labs = index.get((x, y, w, h, int(round(c["area"]))))
@@ -63,5 +63,10 @@ def geometry_features(candidates: list[dict], clean_mask: np.ndarray) -> list[di
                 "de run_pipeline_steps avec les MÊMES paramètres que les candidats"
             )
         lab = labs.pop(0)  # les candidats sont produits par étiquette croissante
-        rows.append(_shape_features(c, (labels[y : y + h, x : x + w] == lab).astype(np.uint8)))
-    return rows
+        masks.append((labels[y : y + h, x : x + w] == lab).astype(np.uint8))
+    return masks
+
+
+def geometry_features(candidates: list[dict], clean_mask: np.ndarray) -> list[dict]:
+    """Une ligne de features `geo_*` par candidat, dans le même ordre que `candidates`."""
+    return [_shape_features(c, m) for c, m in zip(candidates, candidate_masks(candidates, clean_mask))]
