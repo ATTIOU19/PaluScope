@@ -1,0 +1,21 @@
+{
+  "params": {
+    "channel": "gray",
+    "smooth_ksize": 3,
+    "blackhat_ksize": 15,
+    "min_contrast": 20.0,
+    "open_ksize": 3,
+    "close_ksize": 3,
+    "min_area": 6.0,
+    "max_area": 250.0,
+    "min_circularity": 0.3
+  },
+  "meta": {
+    "selected_on": "train (sous-échantillon)",
+    "n_images": 150,
+    "seed": 0,
+    "max_cand_per_image": 60.0,
+    "recall_sample": 0.9911242603550295,
+    "cand_per_image_sample": 18.19333333333333
+  }
+}
