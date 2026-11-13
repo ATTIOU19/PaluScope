@@ -1,0 +1,6 @@
+{
+  "norm_mode": "none",
+  "patch_size": 48,
+  "label_shrink": 1.0,
+  "families": ["geo", "col", "grd", "tex", "hog", "qual"]
+}
