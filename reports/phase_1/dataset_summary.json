@@ -1,0 +1,64 @@
+{
+  "n_candidates": 21611,
+  "per_split": {
+    "train": {
+      "n_images_with_candidates": 801,
+      "n_candidates": 15180,
+      "n_positive": 5954,
+      "prevalence": 0.3922266139657444
+    },
+    "val": {
+      "n_images_with_candidates": 172,
+      "n_candidates": 3181,
+      "n_positive": 1329,
+      "prevalence": 0.4177931468091795
+    },
+    "test": {
+      "n_images_with_candidates": 171,
+      "n_candidates": 3250,
+      "n_positive": 1257,
+      "prevalence": 0.38676923076923075
+    }
+  },
+  "n_features": {
+    "geo": 9,
+    "col": 70,
+    "grd": 3,
+    "tex": 14,
+    "hog": 324,
+    "qual": 5
+  },
+  "candidates_per_image": {
+    "count": 1144.0,
+    "mean": 18.89,
+    "std": 12.93,
+    "min": 1.0,
+    "25%": 9.0,
+    "50%": 17.0,
+    "75%": 26.0,
+    "max": 92.0
+  },
+  "n_nan_features": 0,
+  "norm_mode": "none",
+  "columns_identification": [
+    "image_id",
+    "candidate_id",
+    "split",
+    "group_id",
+    "dataset_source",
+    "device",
+    "smear_type",
+    "image_unannotated",
+    "x",
+    "y",
+    "w",
+    "h",
+    "label",
+    "match_box_id"
+  ],
+  "columns_meta": [
+    "norm_mode",
+    "candidates_cfg",
+    "features_cfg"
+  ]
+}

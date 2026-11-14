@@ -3,10 +3,13 @@
 > Prototype de recherche. Aucun diagnostic clinique.
 
 ## 1. Source
-- **Nom** : Uganda Mobile Thick / Makerere `plasmodium-phonecamera` (dossier `data/raw/plasmodium_phonecamera/`).
-- **Source officielle, référence, licence** : à compléter et à vérifier sur la page officielle du jeu de données avant toute diffusion.
-- **Domaine** : goutte épaisse, images acquises avec un smartphone sur microscope (`dataset_source = makerere_uganda_mobile_thick`, `device = smartphone_on_microscope`, `smear_type = thick`).
 
+- **Nom** : Uganda Mobile Thick / Makerere (`plasmodium-phonecamera`) (dossier `data/raw/plasmodium_phonecamera/`).
+- **Source officielle** : Makerere University - Artificial Intelligence and Data Science Research Group, projet *Automated Laboratory Diagnostics*. [Page officielle du dataset](https://air.ug/microscopy/). [Téléchargement des données](http://air.ug/downloads/plasmodium-phonecamera.zip).
+- **Référence scientifique principale** : Quinn, J. A., Nakasi, R., Mugagga, P. K. B., Byanyima, P., Lubega, W., & Andama, A. (2016). *Deep Convolutional Neural Networks for Microscopy-Based Point of Care Diagnostics*. Proceedings of the 1st Machine Learning for Healthcare Conference, PMLR, 56, 271-281. [DOI / Publication](https://proceedings.mlr.press/v56/Quinn16.html).
+- **Référence complémentaire** : Chibuta, S., & Acar, A. C. (2020). *Real-time Malaria Parasite Screening in Thick Blood Smears for Low-Resource Setting*. Journal of Digital Imaging, 33, 763775. [DOI : 10.1007/s10278-019-00284-2](https://doi.org/10.1007/s10278-019-00284-2).
+- **Licence** : Non explicitement spécifiée pour les fichiers du dataset sur la page officielle de Makerere University. La licence de l'article scientifique ne doit pas être assimilée à celle des images. Réutilisation et redistribution des données à confirmer auprès des auteurs ou du fournisseur.
+- **Domaine** : goutte épaisse, images acquises avec un smartphone sur microscope (`dataset_source = makerere_uganda_mobile_thick`, `device = smartphone_on_microscope`, `smear_type = thick`).
 ## 2. Contenu
 | Élément | Valeur |
 |---|---|
