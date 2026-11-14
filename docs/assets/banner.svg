@@ -61,6 +61,6 @@
     <rect x="262" y="226" width="224" height="34" rx="17" fill="#ffffff" fill-opacity="0.14" stroke="#ffffff" stroke-opacity="0.3"/>
     <text x="374" y="248">Spécial Machine Learning</text>
     <rect x="498" y="226" width="238" height="34" rx="17" fill="#39ff88" fill-opacity="0.18" stroke="#39ff88" stroke-opacity="0.7"/>
-    <text x="617" y="248">Phase 0 · Quality Analyzer</text>
+    <text x="617" y="248">Analyse de frottis sanguins</text>
   </g>
 </svg>
