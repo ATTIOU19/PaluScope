@@ -1,0 +1,11 @@
+{
+  "channel": "gray",
+  "smooth_ksize": 3,
+  "blackhat_ksize": 15,
+  "min_contrast": 20.0,
+  "open_ksize": 3,
+  "close_ksize": 3,
+  "min_area": 10.0,
+  "max_area": 200.0,
+  "min_circularity": 0.3
+}
