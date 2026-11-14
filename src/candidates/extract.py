@@ -83,7 +83,7 @@ def clean_mask(mask: np.ndarray, open_ksize: int, close_ksize: int) -> np.ndarra
     return out
 
 
-def measure_regions(mask: np.ndarray, params: CandidateParams) -> list:
+def measure_regions(mask: np.ndarray, params: CandidateParams, with_contour: bool = False) -> list:
     """Étapes 5-6-7 : composantes connexes, contours, aire / périmètre / circularité."""
     n_labels, labels, stats, _ = cv2.connectedComponentsWithStats(mask, connectivity=8)
     regions = []
@@ -103,24 +103,27 @@ def measure_regions(mask: np.ndarray, params: CandidateParams) -> list:
         circularity = min(1.0, 4.0 * np.pi * area / perimeter ** 2)
         if circularity < params.min_circularity:
             continue
-        regions.append({
+        region = {
             "id": len(regions),
             "bbox": (x, y, w, h),
             "area": float(area),
             "perimeter": perimeter,
             "circularity": float(circularity),
-        })
+        }
+        if with_contour:
+            # le contour a été calculé dans le petit recadrage : on le replace dans l'image entière
+            region["contour"] = (cnt + np.array([x, y])).reshape(-1, 2)
+        regions.append(region)
     return regions
-
-
 # ----------------------------------------------------------------------------
 # Point d'entrée
 # ----------------------------------------------------------------------------
-def extract_candidates(image, params: CandidateParams = None) -> list:
+def extract_candidates(image, params: CandidateParams = None, with_contour: bool = False) -> list:
     """Retourne la liste des régions candidates (voir docs/conventions.md).
 
     image : tableau NumPy RGB uint8 (H, W, 3).
     Chaque candidat : {"id", "bbox": (x, y, w, h), "area", "perimeter", "circularity"}.
+    with_contour=True ajoute le champ optionnel "contour" : tableau (N, 2) de points (x, y).
     """
     params = params or CandidateParams()
     image = np.asarray(image)
@@ -130,8 +133,7 @@ def extract_candidates(image, params: CandidateParams = None) -> list:
     dark = darkness_map(channel, params.blackhat_ksize)
     mask, _ = threshold_map(dark, params.min_contrast)
     mask = clean_mask(mask, params.open_ksize, params.close_ksize)
-    return measure_regions(mask, params)
-
+    return measure_regions(mask, params, with_contour)
 
 def run_pipeline_steps(image, params: CandidateParams = None) -> dict:
     """Comme extract_candidates, mais renvoie aussi les images intermédiaires
